@@ -38,7 +38,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor>
-                <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="38" />
+                <caret column="23" selection-start-column="23" selection-end-column="23" />
               </first_editor>
               <second_editor />
             </state>
@@ -56,13 +56,18 @@
     </replaceStrings>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Lazy1ron &lt;lazy1ron.s3efun@gmail.com&gt;" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -138,28 +143,35 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1577003495247</updated>
-      <workItem from="1577003499430" duration="4836000" />
+      <workItem from="1577003499430" duration="5480000" />
     </task>
+    <task id="LOCAL-00001" summary="typo change">
+      <created>1577008791431</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1577008791431</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4836000" />
+    <option name="totallyTimeSpent" value="5480000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="JRebel" side_tool="true" />
       <window_info id="Favorites" side_tool="true" />
       <window_info id="Designer" />
       <window_info id="Learn" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="JRebel Console" side_tool="true" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" visible="true" weight="0.32952183" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49946696" weight="0.32952183" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.50053304" side_tool="true" weight="0.32952183" />
+      <window_info anchor="bottom" id="Version Control" sideWeight="0.49946696" weight="0.32952183" />
+      <window_info active="true" anchor="bottom" id="Terminal" sideWeight="0.4989339" visible="true" weight="0.32952183" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.5010661" side_tool="true" visible="true" weight="0.32952183" />
       <window_info anchor="bottom" id="Database Changes" />
       <window_info anchor="bottom" id="Statistic" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -190,6 +202,36 @@
         <option value="1" />
       </list>
     </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="typo change" />
+    <option name="LAST_COMMIT_MESSAGE" value="typo change" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/web-reactive-learning/pom.xml">
@@ -243,7 +285,7 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor>
-            <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="38" />
+            <caret column="23" selection-start-column="23" selection-end-column="23" />
           </first_editor>
           <second_editor />
         </state>
