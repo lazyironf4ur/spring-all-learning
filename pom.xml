@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lazy1ron</groupId>
+    <artifactId>lazy1ron-springAll-learning</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>core-learning</module>
+        <module>testing-learning</module>
+        <module>data-access-learning</module>
+        <module>web-servlet-learning</module>
+        <module>web-reactive-learning</module>
+        <module>integration-learning</module>
+        <module>languages-learning</module>
+    </modules>
+
+
+</project>
