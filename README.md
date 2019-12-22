@@ -1,4 +1,4 @@
-> ## Spring Framework ecology Analysis
+> ## Spring Framework Ecology Analysis
 
 
 > ####[Core](https://docs.spring.io/spring/docs/5.2.1.RELEASE/spring-framework-reference/core.html#spring-core)
