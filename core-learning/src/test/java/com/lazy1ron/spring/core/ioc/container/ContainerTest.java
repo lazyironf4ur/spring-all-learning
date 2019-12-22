@@ -2,6 +2,7 @@ package com.lazy1ron.spring.core.ioc.container;
 
 import com.lazy1ron.spring.commons.servicedesign.PersonService;
 import com.lazy1ron.spring.resource.pojo.Student;
+import com.lazy1ron.spring.resource.service.EasyService;
 import com.lazy1ron.spring.resource.service.ForeignService;
 import com.lazy1ron.spring.resource.service.impl.ForeignServiceImpl;
 import org.junit.Test;
@@ -41,7 +42,7 @@ public class ContainerTest {
      **/
 
     @Test
-    public void text2() {
+    public void test2() {
 
         GenericApplicationContext context = (GenericApplicationContext) MyAnnotationApplicationContext.getContext();
 
@@ -56,5 +57,17 @@ public class ContainerTest {
         ForeignService fs1 = (ForeignService) context.getBean("foreign");
 
         fs1.sayHello();
+    }
+
+    /**
+     * @Description: get Beans from the other context autowired via implementing ApplicationContextAware
+     **/
+    @Test
+    public void test3() {
+
+        ApplicationContext origin = MyAnnotationApplicationContext.getContext();
+
+        EasyService es = new AwareImpl().getBean(EasyService.class);
+        es.sayHello();
     }
 }
