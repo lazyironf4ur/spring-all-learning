@@ -16,7 +16,25 @@
         <module>web-reactive-learning</module>
         <module>integration-learning</module>
         <module>languages-learning</module>
+        <module>resource-center</module>
     </modules>
 
+    <properties>
+        <spring.version>5.2.1.RELEASE</spring.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-beans</artifactId>
+            <version>${spring.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
