@@ -1,15 +1,20 @@
 package com.lazy1ron.spring.core.ioc.container;
 
+import com.lazy1ron.spring.commons.cache.CacheUtils;
 import com.lazy1ron.spring.commons.servicedesign.PersonService;
 import com.lazy1ron.spring.resource.pojo.Student;
 import com.lazy1ron.spring.resource.service.EasyService;
 import com.lazy1ron.spring.resource.service.ForeignService;
 import com.lazy1ron.spring.resource.service.impl.ForeignServiceImpl;
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
+import org.springframework.util.CollectionUtils;
 
+import java.util.Collections;
 import java.util.Map;
 
 /**
@@ -69,5 +74,17 @@ public class ContainerTest {
 
         EasyService es = new AwareImpl().getBean(EasyService.class);
         es.sayHello();
+    }
+
+    /**
+     * @Description: Shutting Down the Spring IoC Container Gracefully in Non-Web Applications
+     **/
+    @Test
+    public void test4() {
+
+        ConfigurableApplicationContext context = MyAnnotationApplicationContext.getContext();
+
+        context.registerShutdownHook();
+
     }
 }

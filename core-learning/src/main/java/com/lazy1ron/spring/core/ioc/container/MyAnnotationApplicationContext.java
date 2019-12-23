@@ -16,7 +16,7 @@ public class MyAnnotationApplicationContext {
 
     private static ApplicationContext context = new AnnotationConfigApplicationContext(MyAnnotationApplicationContext.class);
 
-    public static ApplicationContext getContext() {
-        return context;
+    public static<T extends ApplicationContext> T getContext() {
+        return (T) context;
     }
 }

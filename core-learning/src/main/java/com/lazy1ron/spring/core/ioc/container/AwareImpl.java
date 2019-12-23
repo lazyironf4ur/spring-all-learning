@@ -13,14 +13,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class AwareImpl implements ApplicationContextAware {
 
-    public static ApplicationContext context = null;
+    private static ApplicationContext context = null;
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
         context = applicationContext;
     }
 
-    public static ApplicationContext getContext() {
+    private static ApplicationContext getContext() {
         return context;
     }
 
