@@ -104,7 +104,7 @@ public class ContainerTest {
 
     @Test
     public void test7() {
-        // register your customerize BeanPostProcessors to the Spring Container
+        // register your customize BeanPostProcessors to the Spring Container
         ApplicationContext context = MyGenericApplicationContext.getContext(new InitializationTracingBeanPostProcessor());
     }
 
