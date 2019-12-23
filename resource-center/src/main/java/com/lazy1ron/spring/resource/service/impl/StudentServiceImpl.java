@@ -16,7 +16,7 @@ import java.util.Map;
 public class StudentServiceImpl implements StudentService {
 
     @Autowired
-    private Map cache;
+    private Map<Long, Object> cache;
 
     public void printBasicInfoById(Long id) {
         Student student = (Student) cache.get(id);

@@ -1,20 +1,15 @@
 package com.lazy1ron.spring.core.ioc.container;
 
-import com.lazy1ron.spring.commons.cache.CacheUtils;
 import com.lazy1ron.spring.commons.servicedesign.PersonService;
 import com.lazy1ron.spring.resource.pojo.Student;
 import com.lazy1ron.spring.resource.service.EasyService;
 import com.lazy1ron.spring.resource.service.ForeignService;
 import com.lazy1ron.spring.resource.service.impl.ForeignServiceImpl;
-import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.support.GenericApplicationContext;
-import org.springframework.util.CollectionUtils;
-
-import java.util.Collections;
 import java.util.Map;
 
 /**
@@ -72,7 +67,7 @@ public class ContainerTest {
 
         ApplicationContext origin = MyAnnotationApplicationContext.getContext();
 
-        EasyService es = new AwareImpl().getBean(EasyService.class);
+        EasyService es = new ApplicationContextAwareImpl().getBean(EasyService.class);
         es.sayHello();
     }
 
@@ -86,5 +81,24 @@ public class ContainerTest {
 
         context.registerShutdownHook();
 
+    }
+
+    /**
+     * @Description: Customize BeanPostProcessor {@link com.lazy1ron.spring.core.ioc.container.InitializationTracingBeanPostProcessor}
+     * in order to print class name and bean name of those bean initialized by Spring Container;
+     **/
+    @Test
+    public void test5() {
+        ConfigurableApplicationContext context = MyAnnotationApplicationContext.getContext();
+
+
+    }
+    
+    // use AnnotatedBeanDefinitionReader to Inject Bean to a GenericApplicationContext
+    @Test
+    public void test6() {
+        ApplicationContext context = MyGenericApplicationContext.getContext();
+
+        context.getBean(EasyService.class).sayHello();
     }
 }

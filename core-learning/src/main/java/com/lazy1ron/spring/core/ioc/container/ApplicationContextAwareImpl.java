@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
  */
 
 @Component
-public class AwareImpl implements ApplicationContextAware {
+public class ApplicationContextAwareImpl implements ApplicationContextAware {
 
     private static ApplicationContext context = null;
 
