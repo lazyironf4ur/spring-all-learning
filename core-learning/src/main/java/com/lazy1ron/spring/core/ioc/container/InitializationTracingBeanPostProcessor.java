@@ -2,14 +2,13 @@ package com.lazy1ron.spring.core.ioc.container;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
-import org.springframework.stereotype.Component;
 
 /**
  * @author:Lazy1ron
  * @date:2019/12/24 0:41
  */
 
-@Component
+
 public class InitializationTracingBeanPostProcessor implements BeanPostProcessor {
 
     @Override

@@ -93,7 +93,7 @@ public class ContainerTest {
 
 
     }
-    
+
     // use AnnotatedBeanDefinitionReader to Inject Bean to a GenericApplicationContext
     @Test
     public void test6() {
@@ -101,4 +101,11 @@ public class ContainerTest {
 
         context.getBean(EasyService.class).sayHello();
     }
+
+    @Test
+    public void test7() {
+        // register your customerize BeanPostProcessors to the Spring Container
+        ApplicationContext context = MyGenericApplicationContext.getContext(new InitializationTracingBeanPostProcessor());
+    }
+
 }
