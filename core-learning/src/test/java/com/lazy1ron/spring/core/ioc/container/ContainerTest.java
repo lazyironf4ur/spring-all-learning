@@ -108,4 +108,13 @@ public class ContainerTest {
         ApplicationContext context = MyGenericApplicationContext.getContext(new InitializationTracingBeanPostProcessor());
     }
 
+    // ask a Container for a {@link FactoryBean} Instance
+    @Test
+    public void test8() {
+        ApplicationContext context = MyAnnotationApplicationContext.getContext();
+        System.out.println(context.getBean("&serviceFactory"));
+        System.out.println(context.getBean("serviceFactory"));
+        System.out.println(context.getBean("serviceFactory"));
+    }
+
 }
