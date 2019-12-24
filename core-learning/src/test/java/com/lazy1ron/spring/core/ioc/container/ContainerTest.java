@@ -109,6 +109,7 @@ public class ContainerTest {
     }
 
     // ask a Container for a {@link FactoryBean} Instance
+    // TODO: 这里暂时只发现能管理一个bean实例，不能管理一类bean的实例
     @Test
     public void test8() {
         ApplicationContext context = MyAnnotationApplicationContext.getContext();
