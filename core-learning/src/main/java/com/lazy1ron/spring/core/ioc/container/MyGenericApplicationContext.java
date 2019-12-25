@@ -18,7 +18,7 @@ public class MyGenericApplicationContext {
     
     private static Object lock = new Object();
 
-    // to judge the context had been invoked {@refresh()} method
+    // to judge if the context had been invoked {@refresh()} method
     private static boolean refreshed = false;
 
     // add BeanPostProcessor
