@@ -29,5 +29,9 @@ public class ResourceTest {
         }
     }
 
-
+    // obtain JVM Runtiming Properties
+    @Test
+    public void test2() {
+        System.out.println(System.getProperty("spring.application.name"));
+    }
 }
