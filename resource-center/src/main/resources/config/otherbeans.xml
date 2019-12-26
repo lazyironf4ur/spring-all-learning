@@ -7,15 +7,8 @@
         http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 
     <!-- bean definitions here -->
-    <context:component-scan base-package="com.lazy1ron.spring"/>
-    <context:property-placeholder location="config/application.properties"/>
 
-    <bean id="foreignService" class="com.lazy1ron.spring.resource.service.impl.ForeignServiceImpl">
-    </bean>
 
-    <bean id="ownerMessage" class="com.lazy1ron.spring.resource.pojo.OwnerMessage">
-        <property name="ownername" value="${spring.application.owner}"/>
-    </bean>
-
+    <bean id="beanPostProcessor" class="com.lazy1ron.spring.core.ioc.container.InitializationTracingBeanPostProcessor"/>
 
 </beans>
