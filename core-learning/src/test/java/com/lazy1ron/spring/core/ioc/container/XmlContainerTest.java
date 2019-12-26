@@ -1,5 +1,7 @@
 package com.lazy1ron.spring.core.ioc.container;
 
+import com.lazy1ron.spring.core.ioc.container.listeners.BlackListNotifier;
+import com.lazy1ron.spring.core.ioc.container.publishers.EmailService;
 import com.lazy1ron.spring.resource.service.EasyService;
 import com.lazy1ron.spring.resource.service.ForeignService;
 import com.lazy1ron.spring.resource.service.PropertiesService;
@@ -9,7 +11,6 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.MessageSource;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.env.Environment;
-import org.springframework.util.CollectionUtils;
 
 import java.util.*;
 
@@ -19,7 +20,7 @@ import java.util.*;
  */
 
 
-public class ResourceTest {
+public class XmlContainerTest {
 
     @Test
     public void test1() {
@@ -94,5 +95,17 @@ public class ResourceTest {
         ApplicationContext context = new ClassPathXmlApplicationContext("classpath*:xml/beans.xml", "classpath*:config/otherbeans.xml");
         System.out.print("The Application Owner is: ");
         context.getBean(PropertiesService.class).printProperties();
+    }
+
+
+    /**
+     * send an email to BlackListNotifier
+     */
+    @Test
+    public void test6() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath*:xml/beans.xml");
+        EmailService es = (EmailService) context.getBean("aep");
+        es.setBlacklist(Arrays.asList("lazy1ron.s3efun@gmail.com", "1605125086@qq.com"));
+        es.sendEmail("lazy1ron.s3efun@gmail.com", "this is a email for testing");
     }
 }
