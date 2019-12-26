@@ -56,6 +56,8 @@ public class ResourceTest {
 
     // MessageSource object for spring
     // what's diffrences between "classpath" and "classpath*" {@link https://blog.csdn.net/ji519974770/article/details/77248575}
+    // i18n internationalization
+    // TODO: 控制台输出中文乱码
     @Test
     public void test4() {
 
