@@ -11,10 +11,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.env.Environment;
 import org.springframework.util.CollectionUtils;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Iterator;
-import java.util.List;
+import java.util.*;
 
 /**
  * @author:Lazy1ron
@@ -65,7 +62,11 @@ public class ResourceTest {
         MessageSource ms = new ClassPathXmlApplicationContext("classpath*:xml/beans.xml",
                 "classpath*:config/otherbeans.xml");
 
+        String message1 = ms.getMessage("message", null, "Default", Locale.CHINA);
+        String message2 = ms.getMessage("argument.required", new String[]{"userDao"}, "Default", Locale.ENGLISH);
 
+        System.out.println("message1: " + message1);
+        System.out.println("message2: " + message2);
     }
 
 
