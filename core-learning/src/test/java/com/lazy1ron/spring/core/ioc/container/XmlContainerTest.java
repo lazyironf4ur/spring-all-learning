@@ -119,4 +119,15 @@ public class XmlContainerTest {
         es.setBlacklist(Arrays.asList("lazy1ron.s3efun@gmail.com", "1605125086@qq.com"));
         es.sendEmail("lazy1ron.s3efun@gmail.com", "this is a email for testing");
     }
+
+    /**
+     * use a Asynchronous listener to handle event
+     */
+    @Test
+    public void test7() {
+        ApplicationContext context = new ClassPathXmlApplicationContext("classpath*:xml/beans.xml");
+        EmailService es = (EmailService) context.getBean("aep");
+        es.setBlacklist(Arrays.asList("lazy1ron.s3efun@gmail.com", "1605125086@qq.com"));
+        es.sendEmail("1605125086@qq.com", "this is a email for testing Asynchronous listener handles event");
+    }
 }

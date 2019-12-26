@@ -6,6 +6,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 /**
+ * This is a sychronous listener which means that hanles event one-by-one;
  * @author:Lazy1ron
  * @date:2019/12/27 4:05
  */
