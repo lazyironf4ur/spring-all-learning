@@ -99,7 +99,18 @@ public class XmlContainerTest {
 
 
     /**
+     *
      * send an email to BlackListNotifier
+     *
+     * reference:
+     *  Notice that ApplicationListener is generically parameterized with the type of your custom event (BlackListEvent in the preceding example).
+     *  This means that the onApplicationEvent() method can remain type-safe, avoiding any need for downcasting.
+     *  You can register as many event listeners as you wish, but note that, by default, event listeners receive events synchronously.
+     *  This means that the publishEvent() method blocks until all listeners have finished processing the event.
+     *  One advantage of this synchronous and single-threaded approach is that, when a listener receives an event,
+     *  it operates inside the transaction context of the publisher if a transaction context is available.
+     *  If another strategy for event publication becomes necessary,
+     *  see the javadoc for Spring’s ApplicationEventMulticaster interface and SimpleApplicationEventMulticaster implementation for configuration options.
      */
     @Test
     public void test6() {
