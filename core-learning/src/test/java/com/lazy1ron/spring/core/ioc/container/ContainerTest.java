@@ -44,7 +44,7 @@ public class ContainerTest {
     @Test
     public void test2() {
 
-        GenericApplicationContext context = (GenericApplicationContext) MyAnnotationApplicationContext.getContext();
+        GenericApplicationContext context = MyAnnotationApplicationContext.getContext();
 
         DefaultListableBeanFactory beanFactory = (DefaultListableBeanFactory) context.getBeanFactory();
 

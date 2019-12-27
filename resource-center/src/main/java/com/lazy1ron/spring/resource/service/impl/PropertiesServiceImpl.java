@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 public class PropertiesServiceImpl implements PropertiesService {
 
-    @Autowired
+    @Autowired(required = false)
     private OwnerMessage om;
 
     @Override

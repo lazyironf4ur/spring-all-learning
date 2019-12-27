@@ -3,6 +3,7 @@ package com.lazy1ron.spring.resource.service.impl;
 import com.lazy1ron.spring.resource.pojo.Student;
 import com.lazy1ron.spring.resource.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 
 import java.util.Map;
@@ -13,6 +14,7 @@ import java.util.Map;
  */
 
 @Service
+@Primary
 public class StudentServiceImpl implements StudentService {
 
     @Autowired
