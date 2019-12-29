@@ -1,6 +1,7 @@
 package com.lazy1ron.spring.core.aspectj;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -31,10 +32,11 @@ public class AnnotatedAspectJ {
     //    System.out.println(joinPoint.getSourceLocation());
     //}
 
-    @Before("execution(* com.lazy1ron.spring.core.aspectj.AspectJDemo.sayHello())")
+    @Around("execution(* com.lazy1ron.spring.core.aspectj.AspectJDemo.sayHello())")
     public void aroundSayHelloPoint(JoinPoint joinPoint) {
         System.out.println("test aspect");
         System.out.println(joinPoint);
         System.out.println(joinPoint.getSourceLocation());
+
     }
 }
