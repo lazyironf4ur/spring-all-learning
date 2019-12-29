@@ -19,9 +19,4 @@ public class AspectJTest {
         as.print();
     }
 
-    @Test
-    public void test2() {
-        AspectJService ajs = new AspectJServiceImpl();
-        ajs.print();
-    }
 }
