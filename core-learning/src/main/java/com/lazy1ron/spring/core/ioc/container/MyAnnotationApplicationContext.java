@@ -10,9 +10,30 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 public class MyAnnotationApplicationContext {
 
-    private static ApplicationContext context = new AnnotationConfigApplicationContext(PackageScanConfig.class);
+    private static final Class DEFAULT_CLASS = PackageScanConfig.class;
+
+    private static ApplicationContext context;
+
+    private Class<?>[] injectClasses;
+
+
 
     public static<T extends ApplicationContext> T getContext() {
-        return (T) context;
+        return doGetContext();
+    }
+
+    public static<T extends ApplicationContext> T getContext(Class<?> ...clazz) {
+
+        return doGetContext(clazz);
+    }
+
+    private static <T extends ApplicationContext> T doGetContext(Class<?> ...classes) {
+        if (classes.length == 0) {
+            context = new AnnotationConfigApplicationContext(DEFAULT_CLASS);
+            return (T)context;
+        }
+
+        context = new AnnotationConfigApplicationContext(classes);
+        return (T)context;
     }
 }

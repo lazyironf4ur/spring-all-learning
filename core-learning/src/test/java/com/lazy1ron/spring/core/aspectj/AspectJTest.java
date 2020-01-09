@@ -2,7 +2,6 @@ package com.lazy1ron.spring.core.aspectj;
 
 import com.lazy1ron.spring.core.ioc.container.MyAnnotationApplicationContext;
 import com.lazy1ron.spring.resource.service.AspectJService;
-import com.lazy1ron.spring.resource.service.impl.AspectJServiceImpl;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 
