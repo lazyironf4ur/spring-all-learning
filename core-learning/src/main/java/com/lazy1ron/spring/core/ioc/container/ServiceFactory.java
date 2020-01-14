@@ -2,6 +2,7 @@ package com.lazy1ron.spring.core.ioc.container;
 
 import com.lazy1ron.spring.commons.servicedesign.PersonService;
 import org.springframework.beans.factory.FactoryBean;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Component;
 
 import java.util.Arrays;
@@ -17,8 +18,11 @@ public class ServiceFactory<T extends PersonService> implements FactoryBean<T> {
 
     private T[] object;
 
-    public ServiceFactory(T ...t) {
-        this.object = t;
+    public ServiceFactory(@Nullable T ...t) {
+        if (t == null) {
+            return;
+        }
+        object = t;
     }
 
     @Override

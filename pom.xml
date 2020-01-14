@@ -17,7 +17,7 @@
         <module>integration-learning</module>
         <module>languages-learning</module>
         <module>resource-center</module>
-        <module>commons</module>
+        <module>common</module>
     </modules>
 
     <properties>
