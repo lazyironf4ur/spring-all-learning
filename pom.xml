@@ -27,6 +27,8 @@
         <lombok.version>1.18.10</lombok.version>
         <junit.version>4.12</junit.version>
         <aspectj.version>1.9.4</aspectj.version>
+        <dbcp2.version>2.4.0</dbcp2.version>
+        <mysql-connector.version>8.0.18</mysql-connector.version>
     </properties>
 
     <dependencyManagement>
@@ -46,6 +48,19 @@
                 <version>${spring.version}</version>
             </dependency>
 
+            <!--Data Source-->
+            <dependency>
+                <groupId>org.apache.commons</groupId>
+                <artifactId>commons-dbcp2</artifactId>
+                <version>${dbcp2.version}</version>
+            </dependency>
+
+            <!--mysql-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>${mysql-connector.version}</version>
+            </dependency>
 
 
             <!--AspectJ-->
