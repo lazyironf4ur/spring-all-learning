@@ -1,9 +1,12 @@
 package com.lazy1ron.spring.data.access;
 
+import com.mysql.cj.jdbc.Driver;
 import org.apache.commons.dbcp2.BasicDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+
+import java.sql.SQLException;
 
 /**
  * @author:Lazy1ron
@@ -26,10 +29,12 @@ public class DataSourceBuilder {
     private String PASSWORD;
 
 
-    @Bean
-    public BasicDataSource dataSource() {
+    @Bean(destroyMethod = "close")
+    public BasicDataSource dataSource() throws SQLException {
+
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName(DRIVER_CLASS_NAME);
+        dataSource.setDriver(new Driver());
         dataSource.setUrl(URL);
         dataSource.setUsername(USERNAME);
         dataSource.setPassword(PASSWORD);
