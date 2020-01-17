@@ -50,4 +50,7 @@ public class DataSourceBuilderTest {
             // ?
         }
     }
+
+    public void test3() {
+    }
 }

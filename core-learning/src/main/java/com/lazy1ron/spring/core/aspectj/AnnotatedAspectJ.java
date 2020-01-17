@@ -1,6 +1,7 @@
 package com.lazy1ron.spring.core.aspectj;
 
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
@@ -34,24 +35,30 @@ public class AnnotatedAspectJ {
     }
 
     @Before("printPoint1()")
-    public void aroundPrintPoint1(JoinPoint joinPoint) {
+    public void aroundPrintPoint1(JoinPoint joinPoint) throws Throwable {
         System.out.println("implementing method pointcut");
         System.out.println(joinPoint);
         System.out.println(joinPoint.getSourceLocation());
     }
 
     @Before("printPoint2()")
-    public void aroundPrintPoint2(JoinPoint joinPoint) {
+    public void aroundPrintPoint2(JoinPoint joinPoint) throws Throwable {
         System.out.println("interface method pointcut");
         System.out.println(joinPoint);
         System.out.println(joinPoint.getSourceLocation());
     }
 
     @Around("execution(* com.lazy1ron.spring.core.aspectj.AspectJDemo.sayHello())")
-    public void aroundSayHelloPoint(JoinPoint joinPoint) {
+    public void aroundSayHelloPoint(ProceedingJoinPoint joinPoint) {
+        try {
+            joinPoint.proceed();
+        } catch (Throwable throwable) {
+            throwable.printStackTrace();
+        }
         System.out.println("test aspect");
         System.out.println(joinPoint);
         System.out.println(joinPoint.getSourceLocation());
+
 
     }
 }
